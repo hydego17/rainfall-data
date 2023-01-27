@@ -34,8 +34,8 @@ export default function Home() {
         <form action='https://dataonline.bmkg.go.id/data_iklim/download' method='post' target='_blank'>
           <div className='space-y-2'>
             <TextInput label='Station Name' {...register('station-name')} />
-            <TextInput label='Start Date' {...register('from')} />
-            <TextInput label='End Date' {...register('to')} />
+            <TextInput label='Start Date (MM-DD-YYYY)' {...register('from')} />
+            <TextInput label='End Date (MM-DD-YYYY)' {...register('to')} />
             <TextInput label='Parameter' {...register('parameter[]')} />
           </div>
 
