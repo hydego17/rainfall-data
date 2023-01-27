@@ -1,16 +1,7 @@
-import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
 import { Button, TextInput } from '@mantine/core';
-import { http } from '@/lib/http';
 import { useForm } from 'react-hook-form';
 
-function download(payload: any) {
-  return http.post('https://dataonline.bmkg.go.id/data_iklim/download', payload);
-}
-
-const useDownloadData = () => {
-  return useMutation(download);
-};
+import { BsFilePdf, BsFileEarmarkExcel } from 'react-icons/bs';
 
 export default function Home() {
   const { register } = useForm({
@@ -26,11 +17,11 @@ export default function Home() {
 
   return (
     <main className='py-8 container'>
-      <h1 className='text-4xl'>Data BMKG Nadhirah Lamak Syamba</h1>
+      <h1 className='text-3xl font-bold'>Data BMKG Nadhirah Lamak Syamba</h1>
 
       <hr />
 
-      <div className='border p-4'>
+      <div className='border p-4 max-w-[500px]'>
         <form action='https://dataonline.bmkg.go.id/data_iklim/download' method='post' target='_blank'>
           <div className='space-y-2'>
             <TextInput label='Station Name' {...register('station-name')} />
@@ -42,10 +33,10 @@ export default function Home() {
           <hr />
 
           <div className='flex gap-2'>
-            <Button type='submit' variant='filled' name='format' value='xls'>
+            <Button type='submit' variant='filled' name='format' value='xls' leftIcon={<BsFileEarmarkExcel />}>
               XLS
             </Button>
-            <Button type='submit' variant='outline' name='format' value='pdf'>
+            <Button type='submit' variant='outline' name='format' value='pdf' leftIcon={<BsFilePdf />}>
               PDF
             </Button>
           </div>
