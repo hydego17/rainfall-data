@@ -35,15 +35,15 @@ export default function Home() {
     });
 
     await downloadData.mutateAsync(formData).then((res) => {
-      console.log(res.data);
       let resp = res.data;
 
-      var downloadLink = window.document.createElement('a');
-      downloadLink.href = window.URL.createObjectURL(new Blob([resp]));
-      downloadLink.download = 'test.xlsx';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
+      let downloadLink = window.document.createElement('a');
+      downloadLink.href = window.URL.createObjectURL(resp);
+
+      // downloadLink.download = 'test.xlsx';
+      // document.body.appendChild(downloadLink);
+      // downloadLink.click();
+      // document.body.removeChild(downloadLink);
     });
   };
 
@@ -51,11 +51,29 @@ export default function Home() {
 
   return (
     <main className='py-8 container'>
-      <h1 className='text-4xl'>Data BMKG</h1>
+      <h1 className='text-4xl'>Data BMKG Nadhirah Lamak Syamba</h1>
+
+      <hr />
 
       <div className='border p-4'>
+        <form action='https://dataonline.bmkg.go.id/data_iklim/download' method='post' target='_blank'>
+          <input type='hidden' name='station-name' value='Stasiun Meteorologi Aji Pangeran Tumenggung Pranoto' />
+          <input type='hidden' name='from' value='01-01-2021' />
+          <input type='hidden' name='to' value='31-01-2021' />
+          <input type='hidden' name='parameter[]' value='rainfall' />
+          <input type='hidden' name='type' value='mkg' />
+          <Button type='submit' variant='default' name='format' value='xls'>
+            XLS
+          </Button>
+          <Button type='submit' variant='default' name='format' value='pdf'>
+            PDF
+          </Button>
+        </form>
+
+        <hr />
+
         <Button onClick={handleCheckData} loading={isLoading}>
-          Check
+          Download
         </Button>
       </div>
     </main>
