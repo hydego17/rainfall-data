@@ -10,6 +10,7 @@ specifiers:
   '@mantine/next': ^5.10.1
   '@mantine/notifications': ^5.10.1
   '@next/font': 13.1.2
+  '@s-libs/micro-dash': ^15.1.0
   '@tanstack/react-query': ^4.22.0
   '@types/node': 18.11.18
   '@types/react': 18.0.27
@@ -22,6 +23,7 @@ specifiers:
   jotai: ^1.13.1
   lodash.debounce: ^4.0.8
   next: 13.1.2
+  node-cache: ^5.1.2
   postcss: ^8.4.21
   prettier: ^2.8.3
   react: 18.2.0
@@ -41,6 +43,7 @@ dependencies:
   '@mantine/next': 5.10.2_knfl6ps6qqqwpiywkokbtml6se
   '@mantine/notifications': 5.10.2_yzf4d63xstafd7ya36kewhvvjm
   '@next/font': 13.1.2
+  '@s-libs/micro-dash': 15.1.0
   '@tanstack/react-query': 4.23.0_biqbaboplfbrettd7655fr4n2y
   '@types/node': 18.11.18
   '@types/react': 18.0.27
@@ -51,6 +54,7 @@ dependencies:
   jotai: 1.13.1_react@18.2.0
   lodash.debounce: 4.0.8
   next: 13.1.2_biqbaboplfbrettd7655fr4n2y
+  node-cache: 5.1.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.42.1_react@18.2.0
@@ -712,6 +716,13 @@ packages:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: false
 
+  /@s-libs/micro-dash/15.1.0:
+    resolution: {integrity: sha512-aAVutALpYYaqP9D2w9lBPtm/KaBFis25pyl+AjOEnnOJD4cQFBblMYJkNGUMH0gihmUrnvdWEvNscTJE1ZVadw==}
+    dependencies:
+      tslib: 2.5.0
+      utility-types: 3.10.0
+    dev: false
+
   /@swc/helpers/0.4.14:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
@@ -1120,6 +1131,11 @@ packages:
 
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clone/2.1.2:
+    resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
+    engines: {node: '>=0.8'}
     dev: false
 
   /clsx/1.1.1:
@@ -2513,6 +2529,13 @@ packages:
       - babel-plugin-macros
     dev: false
 
+  /node-cache/5.1.2:
+    resolution: {integrity: sha512-t1QzWwnk4sjLWaQAS8CHgOJ+RAfmHpxFWmc36IWTiWHQfs0w5JDMBS1b1ZxQteo0vVVuWJvIUKHDkkeK7vIGCg==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      clone: 2.1.2
+    dev: false
+
   /node-releases/2.0.8:
     resolution: {integrity: sha512-dFSmB8fFHEH/s81Xi+Y/15DQY6VHW81nXRj86EMSL3lmuTmK1e+aT4wrFCkTbm+gSwkw4KpX+rT/pMM2c1mF+A==}
     dev: true
@@ -3340,6 +3363,11 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  /utility-types/3.10.0:
+    resolution: {integrity: sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==}
+    engines: {node: '>= 4'}
+    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}

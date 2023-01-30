@@ -3,6 +3,7 @@ import axios from 'axios';
 const DEFAULT_TIMEOUT = 60 * 1000;
 
 let axiosInstance = axios.create({
+  baseURL: 'https://dataonline.bmkg.go.id',
   timeout: DEFAULT_TIMEOUT,
 });
 

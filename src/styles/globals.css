@@ -13,6 +13,10 @@ body {
     'Helvetica Neue', sans-serif;
 }
 
+body {
+  @apply bg-slate-50;
+}
+
 hr {
   @apply my-4;
 }
