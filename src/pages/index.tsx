@@ -73,9 +73,9 @@ export default function Home() {
         <title>Nadhirah Lamak Syamba</title>
       </Head>
 
-      <div className='h-screen centered p-4'>
-        <main className='max-w-[750px]'>
-          <h1 className='text-3xl font-bold text-center'>Data BMKG Nadhirah Lamak Syamba</h1>
+      <div className='centered py-16 px-4'>
+        <section className='max-w-[750px]'>
+          <h1 className='text-2xl font-bold text-center'>Data BMKG Nadhirah Lamak Syamba</h1>
 
           <hr />
 
@@ -157,8 +157,75 @@ export default function Home() {
             </div>
           </form>
         </div> */}
-        </main>
+        </section>
       </div>
     </>
   );
 }
+
+let data = [
+  {
+    label: 'N',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'NNE',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'NE',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'ENE',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'E',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'ESE',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'SE',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'SSE',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'S',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'SSW',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'SW',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'WSW',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'W',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'WNW',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'NW',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+  {
+    label: 'NNW',
+    value: [1.81, 1.78, 0.16, 0.0, 0.0, 0.0, 0.0, 3.75],
+  },
+];
